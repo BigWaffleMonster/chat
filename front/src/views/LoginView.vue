@@ -6,15 +6,22 @@
 
         <label for="nickname">NickName</label>
         <my-input v-model="nickname" id="nickname" />
-        <button type="submit" class="bg-cyan-300 w-full py-2 rounded hover:bg-cyan-400 transition-colors">
-          Go
-        </button>
+        <router-link to='/chat'>
+          <button 
+            type="submit" 
+            @click="$store.commit('setNickname', nickname)" 
+            class="bg-cyan-300 w-full py-2 rounded hover:bg-cyan-400 transition-colors"
+          >
+            Go
+          </button>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+
 export default {
   data() {
     return {
