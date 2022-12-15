@@ -3,7 +3,6 @@ package ws
 import (
 	"log"
 	"net/http"
-	"time"
 
 	"github.com/gorilla/websocket"
 )
@@ -19,7 +18,6 @@ var upgrader = websocket.Upgrader{
 type Message struct {
 	Event    string    `json:"event"`
 	Id       int       `json:"id"`
-	Date     time.Time `json:"date"`
 	Username string    `json:"username"`
 	Body     string    `json:"body"`
 }

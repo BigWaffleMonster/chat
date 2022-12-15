@@ -11,5 +11,5 @@ func main() {
 }
 
 func messageHandler(msg ws.Message) {
-	fmt.Print(msg)
+	fmt.Println(msg)
 }

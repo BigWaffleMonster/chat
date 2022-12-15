@@ -1,4 +1,5 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
+import { wsModule } from './wsModule'
 
 export default createStore({
   state: () => ({
@@ -22,6 +23,6 @@ export default createStore({
   },
 
   modules: {
-
+    ws: wsModule
   }
 })
